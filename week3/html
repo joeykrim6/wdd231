@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About our white water rafting company">
+    <title>About Us | White Water Rafting</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <img src="images/logo.png" alt="Rafting Company Logo" class="logo">
+        <!-- Mission/Purpose -->
+        <p>Providing thrilling and safe white water rafting experiences for adventure enthusiasts.</p>
+    </header>
+    <main>
+        <!-- History Section -->
+        <section>
+            <h2>History</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Our company has been offering memorable rafting experiences for over a decade.</p>
+        </section>
+        <!-- Adventure Awaits Section -->
+        <section>
+            <h2>Adventure Awaits You!</h2>
+            <!-- Images of rafting -->
+            <img src="images/rafting1.jpg" alt="Rafting Adventure 1">
+            <img src="images/rafting2.jpg" alt="Rafting Adventure 2">
+            <img src="images/rafting3.jpg" alt="Rafting Adventure 3">
+            <img src="images/rafting4.jpg" alt="Rafting Adventure 4">
+            <img src="images/rafting5.jpg" alt="Rafting Adventure 5">
+        </section>
+    </main>
+    <footer>
+        <!-- Copyright -->
+        <p>&copy; 2024 White Water Rafting Co. | Designed by Your Name</p>
+        <!-- Social Media Links -->
+        <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+    </footer>
+</body>
+</html>
