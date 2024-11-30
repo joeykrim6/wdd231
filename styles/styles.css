@@ -2,13 +2,15 @@ nav {
     background-color: darkblue;
     padding: 10px;
 }
-    nav a{
+
+nav a{
         color:white;
         display: block;
         padding: 20px;
     }
+
 h1 {
-    color: darkblue;
+    color: darkblue; }
 
 img {
     width: 150px;
