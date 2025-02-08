@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0e0e0; /* background color */
+  }
+  
+  .form-container {
+    max-width: 600px; /* Limits the maximum width of the form */
+      margin: 0 auto; /* Center the form on the page */
+      padding: 20px;
+      background-color: #152d7e; /* Background color to give contrast */
+      border-radius: 10px;
+  }
+  
+  /*for responsiveness */
+  @media (max-width: 768px) {
+    form {
+        width: 90%; /* Fits 90% of screen width on smaller devices */
+    }
+  }
+  
+  h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  select, input[type="date"], input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #d8d2da;
+    color: #333;
+  }
+  
+  .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .rating input:checked ~ label,
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: #ffc700; /* Color for selected stars */
+  }
+  
+  
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .features label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px; /* Space between checkbox and text */
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #e1b2de;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b9a9be;
+    margin-top: 20px;
+  }
