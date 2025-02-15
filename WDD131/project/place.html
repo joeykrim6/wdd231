@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check our Factory data</title>
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/factory-place.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Check our Factory data</h1>
+    </header>
+
+    <main>
+      <section class="hero">
+        <picture>
+          <source srcset="images/can-factory.webp media="(max-width: 20px)" />
+          <source srcset="images/can-factory2,jpg" media="(max-width: 50px)" />
+          <img src="images/factory_pic.jpg" alt="Factory view" />
+        </picture>
+
+        <!-- Overlay containers for Data and Weather -->
+        <div class="info-overlay">
+          <div class="data">
+              <h2>Factory Data : Production</h2>
+              <ul>
+                  <li>Area: 10,000 sq ft</li>
+                  <li>Production Capacity: 1,200,000 cans per day</li>
+                  <li>Location: Chicago, IL</li>
+                  <li>Languages: English, Spanish</li>
+                  <li>Currency: US Dollar (USD)</li>
+                  <li>Time Zone: UTC-6</li>
+                  <li>Contact Number: +1 (312) 555-1234</li>
+                  <li>Website: cansfactory.com</li>
+              </ul>
+          </div>
+          <div class="data">
+            <h2>Factory Data: Employees</h2>
+            <ul>
+                <li>Area: 10,000 sq ft</li>
+                <li>Production Capacity: 1,200,000 cans per day</li>
+                <li>Location: Chicago, IL</li>
+                <li>Languages: English, Spanish</li>
+                <li>Currency: US Dollar (USD)</li>
+                <li>Time Zone: UTC-6</li>
+                <li>Contact Number: +1 (312) 555-1234</li>
+                <li>Website: cansfactory.com</li>
+            </ul>
+        </div>
+        <div class="data">
+          <h2>Factory Security indicators</h2>
+          <ul>
+              <li>Area: 10,000 sq ft</li>
+              <li>Production Capacity: 1,200,000 cans per day</li>
+              <li>Location: Chicago, IL</li>
+              <li>Languages: English, Spanish</li>
+              <li>Currency: US Dollar (USD)</li>
+              <li>Time Zone: UTC-6</li>
+              <li>Contact Number: +1 (312) 555-1234</li>
+              <li>Website: cansfactory.com</li>
+          </ul>
+      </div>
+      
+          <div class="weather">
+              <h2>
+                  Weather Conditions<span class="weather-icon" aria-hidden="true">🌡</span>
+              </h2>
+              <p>Temperature: <span id="temperature">72°F</span></p>
+              <p>Wind Speed: <span id="windSpeed">10 mph</span></p>
+              <p>Wind Chill: <span id="windChill">70°F</span></p>
+          </div>
+      </div>
+      
+      </section>
+    </main>
+
+
+    <footer>
+      <p>&copy; <span id="currentYear"></span> 💻⚙⚙🛠🛠 HEXERS FACTORY 💻⚙⚙🛠🛠 , New York- USA| Last Modified: <span id="lastModified"></span></p>
+    </footer>
+  </body>
+</html>
