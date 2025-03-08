@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joshua Kenabu's Portfolio</title>
+  <meta name="description" content="A portfolio showcasing the work and skills of Jarom Campos, certificates and more.">
+  <meta name="author" content="Jarom Campos">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="../wdd231/styles/style.css">
+  <script src="../wdd231/scripts/script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="profile">
+      <img src="../wdd231/images/me.jpg" alt="Profile Picture" />
+      <h1>Joshua Kenabu.</h1>
+    </div>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#chamber">Chamber</a>
+      <a href="#github">GitHub Profile</a>
+      <a href="#linkedin">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="course-work">
+      <h2>Course Work</h2>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+
+    <section class="location">
+      <h2>Makurdi, Nigeria</h2>
+      <img src="images/makurdi.jpg" alt="Baobab Trees" />
+      <p>Makurdi, Nigeria</p>
+    </section>
+
+    <section class="certificates">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="filters">
+        <button onclick="filterCourses('all')">All</button>
+        <button onclick="filterCourses('cse')">CSE</button>
+        <button onclick="filterCourses('wdd')">WDD</button>
+      </div>
+
+      <div class="courses">
+        <button class="course cse" data-credits="3">CSE 110</button>
+        <button class="course wdd" data-credits="2">WDD 130</button>
+        <button class="course cse" data-credits="3">CSE 111</button>
+        <button class="course cse" data-credits="2">CSE 210</button>
+        <button class="course wdd" data-credits="3">WDD 131</button>
+        <button class="course wdd wdd-231" data-credits="2">WDD 231</button>
+      </div>
+      <div class="credit-display">
+        <span id="total-credits">Total Credits: 0</span>
+        <span id="individual-credits"></span>
+      </div>
+    </section>
+    <!-- Main content here -->
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span> 🤖🤖 Joshua Kenabu 🤖🤖 , 
+      Nigeria
+    </p>
+    <img src="images/bandera.png" alt="Baobab Trees" />
+    <p id="lastModified"></p>
+  </footer>
+</body>
+
+</html>
