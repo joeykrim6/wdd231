@@ -1,0 +1,99 @@
+/* Reset/Normalize CSS */
+body, h1, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  
+/* Header and Navigation */
+header {
+  background: #2d3e50;
+  color: #0056b3;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+  
+  /* Main Content */
+  .view-toggle {
+    text-align: center;
+    margin: 1em 0;
+  }
+  
+  button {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    background-color: #004d99;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #003366;
+  }
+  
+  .grid, .list {
+    display: grid;
+    gap: 1em;
+    padding: 1em;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .list {
+    grid-template-columns: 1fr;
+  }
+  
+  .member-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .member-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .member-card h3 {
+    margin: 0.5em 0;
+  }
+  
+  /* Footer */
+  footer {
+    background: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 7em;
+  }
