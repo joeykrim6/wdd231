@@ -1,0 +1,473 @@
+/* Reset/Normalize CSS */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  h1, h2, h3 {
+    margin: 0.5em 0;
+    color: #0056b3;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hero Image Section */
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    
+  }
+  
+  .hero-img {
+    width: 5%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  
+  
+  .hero-text h1 {
+    font-size: 2.5em;
+  }
+  
+  .hero-text p {
+    font-size: 1.2em;
+  }
+  
+  /* Call to Action Section */
+  .cta {
+    text-align: center;
+    background: #0056b3;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  .cta h2 {
+    font-size: 2em;
+  }
+  
+  .cta p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6600;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: #e65c00;
+  }
+  
+  /* Events Section */
+  .events ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .events li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #eef7ff;
+    border-left: 5px solid #0056b3;
+    border-radius: 8px;
+  }
+  
+  .events h3 {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+  }
+  
+  /* Weather Section */
+  .weather-widget {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+    background: #e0f7fa;
+    border-radius: 8px;
+  }
+  
+  .weather-widget p {
+    margin: 5px 0;
+  }
+  
+  /* Company Spotlights Section */
+  .spotlight {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fdfdfd;
+  }
+  
+  .spotlight h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .spotlight p {
+    font-size: 1em;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 2em;
+    }
+  
+    .hero-text p, .cta p {
+      font-size: 1em;
+    }
+  
+    .cta-button {
+      font-size: 0.9em;
+      padding: 8px 15px;
+    }
+  }
+  
+  
+  /* Header and Navigation */
+  header {
+    background: #2d3e50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  /* Main Content */
+  
+  
+  /* Footer */
+  footer {
+    background: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 7em;
+  }
+  
+  
+  /*aditional for discover /
+  
+  
+  /* Discover Layout */
+  .discover-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px;
+  }
+  
+  .sidebar {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery {
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajusta mínimo a 400px */
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  
+  .gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .gallery-item img {
+    display: block; /* Evita márgenes colapsados */
+    max-width: none; /* Elimina restricciones globales */
+    width: 100%; /* Permite expandirse al tamaño del contenedor */
+  }
+  
+  .gallery-item .description {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5;
+    word-wrap: break-word;
+    margin: 0;
+  }
+  
+  
+  /aside/
+  .sidebar {
+    background-color: #f9f9f9;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar h2, .sidebar h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .event-list li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .event-date {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 5px;
+  }
+  
+  .event-title {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .calendar {
+    margin-top: 20px;
+  }
+  
+  .calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .calendar th, .calendar td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .calendar td {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .calendar td.highlight {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+  }
+  
+  /events/
+  
+  /* Estilos generales para la lista de eventos */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilos para cada elemento de la lista (cada evento) */
+  li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Línea divisoria entre eventos */
+  }
+  
+  /* Estilos para la fecha del evento */
+  .event-date {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para el título del evento */
+  .event-title {
+    font-size: 18px;
+    color: #007bff; /* Azul claro llamativo */
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para la descripción del evento */
+  .event-description {
+    color: #666;
+    line-height: 1.5;
+    text-align: justify; /* Alinea el texto justificado */
+  }
+  
+  
+  
+  /responsividad/
+  
+  /* Añadido para responsividad en pantallas pequeñas */
+  @media (max-width: 1200px) {
+    section {
+      padding: 15px;
+      margin: 15px auto;
+    }
+  
+    .hero-text h1 {
+      font-size: 2.2em;
+    }
+  
+    .hero-text p {
+      font-size: 1.1em;
+    }
+  
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  
+    .cta-button {
+      font-size: 0.9em;
+      padding: 8px 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Ajustes para tablets y móviles */
+    .hero-text h1 {
+      font-size: 1.8em;
+    }
+  
+    .hero-text p, .cta p {
+      font-size: 1em;
+    }
+  
+    .cta-button {
+      font-size: 0.8em;
+      padding: 6px 12px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav a {
+      margin: 0.5em 0;
+    }
+  
+    .discover-layout {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .sidebar {
+      max-width: 100%;
+      padding: 20px;
+    }
+  
+    .event-list li {
+      padding: 8px;
+    }
+  
+    footer {
+      font-size: 0.9em;
+      padding: 0.8em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Ajustes para móviles más pequeños */
+    body {
+      font-size: 14px;
+    }
+  
+    h1, h2, h3 {
+      font-size: 1.5em;
+    }
+  
+    .hero-text h1 {
+      font-size: 1.5em;
+    }
+  
+    .hero-text p, .cta p {
+      font-size: 0.9em;
+    }
+  
+    .cta-button {
+      font-size: 0.7em;
+      padding: 5px 10px;
+    }
+  
+    .gallery-item img {
+      max-width: 100%;
+    }
+  
+    .calendar table {
+      font-size: 0.8em;
+    }
+  
+    .event-date {
+      font-size: 1em;
+    }
+  }

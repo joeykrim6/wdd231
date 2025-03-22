@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page of Chamber here you can find imformation avout events, weather amd companies">
+    <meta name="author" content="Joshua Kenabu">
+    <title>Chamber of Commerce home page</title>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce Home Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://github.com/joeykrim6/wdd231/blob/main/chamber/images/fitness-center.jpg">
+    <meta property="og:url" content="https://Joshua Kenabu.github.io/wdd231/chamber/directory.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicons/company-one-favicon.ico" type="image/x-icon">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="styles/home.css">
+
+</head>
+    
+<body>
+    <header>
+        <h1>Chamber: Home page</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html" >Directory</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Image Section -->
+        <section class="hero">
+            <img src="images/hero2.jpg" alt="Cityscape or community-related image" class="hero-img">
+            <div >
+                <h1>Welcome to Our Chamber of Commerce</h1>
+                <p>Connecting businesses, fostering growth, and supporting the community.</p>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <h2>Join the Chamber of Commerce</h2>
+            <p>Become part of a thriving network of businesses and make a difference in our community.</p>
+            <a href="join.html" class="cta-button">Join Now</a>
+        </section>
+
+        <!-- Current Events Section -->
+        <section class="events">
+            <h2>Current Events</h2>
+            <ul>
+                <li>
+                    <h3>Business Networking Luncheon</h3>
+                    <p>Date: December 5, 2024 | Location: City Center Hall,Lima-</p>
+                    <p>Join us for an afternoon of connections and insights.</p>
+                </li>
+                <li>
+                    <h3>Holiday Market</h3>
+                    <p>Date: December 10-15, 2024 | Location: Green Buildings, Lima-Miraflores</p>
+                    <p>Support local businesses and enjoy festive activities.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <!-- <section class="weather">
+            <h2>Weather</h2>
+            <div class="weather-widget">
+                <p id="weather-location">Location: Your City</p>
+                <p id="weather-temp">Temperature: 72°F</p>
+                <p id="weather-condition">Condition: Sunny</p>
+            </div>
+        </section> -->
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Weather</h2>
+            <div id="weather-widget">
+                <p id="weather-location">Location: Loading...</p>
+                <p id="weather-temp">Temperature: Loading...</p>
+                <p id="weather-condition">Condition: Loading...</p>
+                <h3>3-Day Forecast</h3>
+                <ul id="forecast"></ul>
+            </div>
+        </section>
+
+        <!-- Company Spotlights Section -->
+        <section class="spotlights">
+            <h2>Company Spotlights</h2>
+            <div id="spotlights-container"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Contact us: info@chamber.com | (123) 456-7890</p>
+        <p>Developed by Joahua Kenabu | WDD 231 | <span id="lastModified"></span></p>
+        <p>&copy; <span id="year"></span> Chamber</p>
+    </footer>
+
+    <script src="scripts/home.js" defer></script>
+</body>
+
+</html>
