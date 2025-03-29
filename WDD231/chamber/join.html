@@ -1,0 +1,147 @@
+!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join our Chamber of Commerce and explore opportunities for networking, business growth, and community involvement.">
+    <meta name="author" content="Joshua Kenabu">
+    <title>Join Our Chamber | Chamber of Commerce Directory</title>
+
+    <meta property="og:title" content="Join Our Chamber | Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/fitness-center.jpg">
+    <meta property="og:url" content="https://joeykrim6i.github.io/wdd231/chamber/join.html">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <header>
+        <h1>Chamber: Join Page</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Membership Form</h2>
+            <form method="post" action="thankyou.html">
+                <label>
+                    First Name:
+                    <input type="text" name="first_name" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+
+                <label>
+                    Last Name:
+                    <input type="text" name="last_name" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+
+                <label>
+                    Organizational Title:
+                    <input type="text" name="organization_title" title="Enter your organizational title" autocomplete="organization-title" 
+                           pattern="[A-Za-z\-\s]{7,}" required>
+                </label>
+
+                <label>
+                    Email Address:
+                    <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@domain.com" required>
+                </label>
+
+                <label>
+                    Mobile Phone:
+                    <input type="tel" name="phone" title="Enter your mobile number" autocomplete="tel" required>
+                </label>
+
+                <label>
+                    Business/Organization Name:
+                    <input type="text" name="organization_name" title="Enter your business or organization name" autocomplete="organization" required>
+                </label>
+
+                <label>
+                    Membership Level:
+                    <select name="membership_level" title="Select your membership level" required>
+                        <option value="NP">Non-Profit Membership (Free)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>
+                    Business Description:
+                    <textarea name="business_description" title="Describe your business" required></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+
+                <button type="submit">Join the Chamber</button>
+            </form>
+        </section>
+
+        <section class="membership-cards">
+            <div class="card" id="np-card">
+                <h3>Non-Profit Membership</h3>
+                <button onclick="showModal('np-modal')">Learn More</button>
+            </div>
+            <div class="card" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <button onclick="showModal('bronze-modal')">Learn More</button>
+            </div>
+            <div class="card" id="silver-card">
+                <h3>Silver Membership</h3>
+                <button onclick="showModal('silver-modal')">Learn More</button>
+            </div>
+            <div class="card" id="gold-card">
+                <h3>Gold Membership</h3>
+                <button onclick="showModal('gold-modal')">Learn More</button>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div class="modal" id="np-modal">
+            <div class="modal-content">
+                <h4>Non-Profit Membership Benefits</h4>
+                <p>Free membership for non-profit organizations. Includes event access and basic directory listing.</p>
+                <button onclick="closeModal('np-modal')">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="bronze-modal">
+            <div class="modal-content">
+                <h4>Bronze Membership Benefits</h4>
+                <p>Includes event discounts and marketing resources.</p>
+                <button onclick="closeModal('bronze-modal')">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="silver-modal">
+            <div class="modal-content">
+                <h4>Silver Membership Benefits</h4>
+                <p>Includes all Bronze benefits plus training and networking opportunities.</p>
+                <button onclick="closeModal('silver-modal')">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="gold-modal">
+            <div class="modal-content">
+                <h4>Gold Membership Benefits</h4>
+                <p>Includes all Silver benefits plus premium advertising and spotlight positions.</p>
+                <button onclick="closeModal('gold-modal')">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact us: info@chamber.com | (123) 456-7890</p>
+        <p>Developed by Joshua Kenabu | WDD 231 | <span id="lastModified"></span></p>
+        <p>&copy; <span id="year"></span> Chamber</p>
+    </footer>
+
+    <script src="scripts/join.js"></script>
+</body>
+</html>
