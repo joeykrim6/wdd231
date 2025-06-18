@@ -1,61 +1,72 @@
+
 import csv
+from datetime import datetime
 
-def read_dictionary(filename, key_column_index):
+def read_dictionary(filename, key_coloumn_index):
     """Read the contents of a CSV file into a compound
-    dictionary and return the dictionary.
-    Parameters
-        filename: the name of the CSV file to read.
-        key_column_index: the index of the column
-            to use as the keys in the dictionary.
-    Return: a compound dictionary that contains
-        the contents of the CSV file.
-    """
-    result_dict = {}
+dictionary and return the dictionary.
+Parameters
+filename: the name of the CSV file to read.
+key_column_index: the index of the column
+to use as the keys in the dictionary.
+Return: a compound dictionary that contains
+the contents of the CSV file.
+"""
+    dictionary = {}
+    with open(f'{filename}', 'rt') as filename:
+        reader = csv.reader(filename)
+        
+        next(reader)
+            
+        for row_list in reader:
+            if len(row_list) != 0:
+                key = row_list[key_coloumn_index]
+                dictionary[key] = row_list
 
-    with open(filename, "r") as csvfile:
-        reader = csv.reader(csvfile)
-        next(reader)  # Skip header row
+    return dictionary
 
-        for row in reader:
-            if len(row) == 0:
-                continue  # Skip empty rows
-            key = row[key_column_index]
-            # Convert price to float for accurate calculations later
-            row[2] = float(row[2])
-            result_dict[key] = row
+def read_from_requests(dictionary):
+    
+    total = 0.00
+    total_quantity = 0
+    with open('request.csv', 'rt') as request:
+        reader = csv.reader(request)
+        next(reader)
+    
+        for row_list in reader:
+            if len(row_list) != 0:
+                try: 
+                    item = dictionary[row_list[0]]
+                except KeyError as key_error:
+                    print(f'{key_error}')
+                    print(f'{row_list[0]}')
+                quantity = row_list[1]
+                total += float(item[2])
+                total_quantity += int(quantity)
+                print(f'{item[1]}: {quantity} @ {item[2]}')
+    print(f'Number of Items: {total_quantity}')
+    return calculate_total_cost(total)
+    
 
-    return result_dict
-
-
+def calculate_total_cost(total):
+    print(f'Subtotal: {total:.2f}')
+    tax = total * 0.06
+    print(f'Sales Tax: {tax:.2f}')
+    total_cost = total + tax
+    return total_cost
+    
 def main():
-    # Read products.csv into a dictionary
-    products_dict = read_dictionary("products.csv", 0)
-
-    # Print the complete dictionary
-    print("All Products")
-    print(products_dict)
-
-    # Print requested items
-    print("Requested Items")
-    with open("request.csv", "r") as request_file:
-        reader = csv.reader(request_file)
-        next(reader)  # Skip header row
-
-        for row in reader:
-            if len(row) < 2:
-                continue  # Skip malformed lines
-            product_number = row[0]
-            quantity = int(row[1])
-
-            if product_number in products_dict:
-                product = products_dict[product_number]
-                name = product[1]
-                price = product[2]
-                print(f"{name}: {quantity} @ {price:.2f}")
-            else:
-                print(f"Product {product_number} not found.")
-
-
-# Protect the call to main
+    try:
+        product_dict = read_dictionary('products.csv', 0)
+        print('Inkom Emporium')
+        print('Requested Items')
+        total_cost =read_from_requests(product_dict)    
+        print(f'Total: {total_cost:.2f}')
+        print('Thank you for shopping at Inkom Emporium')
+        current_date_and_time = datetime.now()
+        print(f'{current_date_and_time:%A %b   %#d %I:%M:%S %Y}')
+    except (FileNotFoundError, PermissionError) as error:
+        print(f'{error}')
+    
 if __name__ == "__main__":
     main()
