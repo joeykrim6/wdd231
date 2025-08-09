@@ -1,0 +1,5 @@
+
+Type,Name,Description,Points,TargetCount,BonusPoints,Period
+Simple,Brush teeth,Brush my teeth daily,50,,,
+Eternal,Keep covenants,"read scriptures, pray, attend church, take the sacrament, go to the temple, etc...",100,,,
+Checklist,Bike to work,Bike to work at least 3 times a week,100,3,300,Weekly
